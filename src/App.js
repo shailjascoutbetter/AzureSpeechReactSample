@@ -3,6 +3,7 @@ import { Container } from 'reactstrap';
 import { getTokenOrRefresh } from './token_util';
 import './custom.css'
 import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
+import AudioRecorder from './CaptureAudio';
 
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk')
 
@@ -126,8 +127,9 @@ export default function App() {
                         <i className="fas fa-volume-mute fa-lg mr-2" onClick={() => handleMute()}></i>
                         Pause/resume text to speech output.
                     </div>
-
+                    <AudioRecorder/>
                 </div>
+                
                 <div className="col-6 output-display rounded">
                     <code>{displayText}</code>
                 </div>
