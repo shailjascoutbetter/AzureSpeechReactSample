@@ -48,6 +48,7 @@ export const AudioRecorder = () => {
     }
   }
 
+    
   const uploadToAzureBlobStorage = async (blob) => {
     const containerName = CONTAINER_NAME;
     const blobName = `audio-${Date.now()}.wav`;
